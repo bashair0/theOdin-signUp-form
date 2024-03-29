@@ -8,6 +8,7 @@
   --primary-clr-100: hsl(0, 0%, 100%);
   --primary-clr-200: hsl(210, 20%, 98%);
   --primary-clr-300: hsl(216, 11%, 91%);
+  --primary-clr-400: hsl(216, 9%, 68%);
   --primary-clr-800: hsl(215, 20%, 22%);
   --primary-clr-900: hsl(0, 0%, 0%);
 
@@ -23,11 +24,12 @@ body {
 
 .header {
   height: 10rem;
-  font-family: norse;
   background-image: url(assets/images/background-image.jpg);
   background-size: cover;
   background-position: center;
   padding-top: 2rem;
+
+  position: relative;
 }
 
 @media (min-width: 53.125em) {
@@ -52,22 +54,122 @@ body {
   align-items: center;
   justify-content: center;
   gap: 2px;
+  font-family: norse;
   background-color: rgba(0, 0, 0, 0.5);
   color: var(--primary-clr-100);
   padding-block: 0.5rem;
 }
 
+.header > p {
+  font-size: 0.6rem;
+  color: var(--primary-clr-100);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+}
+
+main {
+  background-color: var(--primary-clr-200);
+}
+
 main > p {
+  font-size: 0.8rem;
   font-weight: bold;
   margin-top: 1rem;
   margin-left: 2rem;
   width: min(55ch, 75%);
 }
 
-@media (min-width: 53.125em) {
+@media (min-width: 31.25em) {
   main {
     padding-block: auto;
   }
+
+  main > p {
+    font-size: 1rem;
+  }
+}
+
+.form-container {
+  margin-top: 2rem;
+  padding-left: 2rem;
+  padding-block: 1rem;
+  background-color: var(--primary-clr-100);
+  box-shadow: 0 10px 10px var(--primary-clr-300);
+}
+
+.form-container > h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+input {
+  outline: none;
+  border: 1px solid var(--primary-clr-300);
+  border-radius: 5px;
+  width: 80%;
+  height: 1.5rem;
+  padding-inline: 0.5rem;
+}
+
+input:focus {
+  border-color: var(--secondary-blue);
+}
+
+input:invalid {
+  border-color: var(--secondary-red);
+}
+
+@media (min-width: 31.25em) {
+  fieldset {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+  }
+  fieldset > div {
+    width: 50%;
+  }
+}
+
+@media (min-width: 64em) {
+  fieldset > div {
+    width: 40%;
+  }
+}
+
+label {
+  display: block;
+  margin-top: 0.8rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.submit-btn {
+  background-color: var(--secondary-green);
+  color: var(--primary-clr-100);
+  font-weight: bold;
+  margin-left: 2rem;
+  margin-block: 2rem 1rem;
+  padding: 0.8rem 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px var(--primary-clr-400);
+}
+
+.login-btn {
+  color: var(--secondary-green);
+  font-weight: bold;
+}
+
+button + p {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 /* Box sizing rules */
