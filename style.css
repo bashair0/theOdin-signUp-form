@@ -1,0 +1,96 @@
+@font-face {
+  font-family: norse;
+  src: url(assets/fonts/Norse-Bold.otf);
+  font-weight: bold;
+}
+
+:root {
+  --primary-clr-100: hsl(0, 0%, 100%);
+  --primary-clr-200: hsl(210, 20%, 98%);
+  --primary-clr-300: hsl(216, 11%, 91%);
+  --primary-clr-800: hsl(215, 20%, 22%);
+  --primary-clr-900: hsl(0, 0%, 0%);
+
+  --secondary-blue: hsl(224, 70%, 50%);
+  --secondary-green: hsl(92, 20%, 35%);
+  --secondary-red: hsl(0, 64%, 45%);
+}
+
+body {
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.header {
+  height: 10rem;
+  font-family: norse;
+  background-image: url(assets/images/background-image.jpg);
+  background-size: cover;
+  background-position: center;
+  padding-top: 2rem;
+}
+
+@media (min-width: 53.125em) {
+  body {
+    display: flex;
+  }
+
+  .header {
+    height: 100vh;
+    width: 40vw;
+    padding-top: 12%;
+    font-size: 2rem;
+  }
+
+  .logo-img {
+    height: 70px;
+  }
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--primary-clr-100);
+  padding-block: 0.5rem;
+}
+
+main > p {
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  width: min(55ch, 75%);
+}
+
+@media (min-width: 53.125em) {
+  main {
+    padding-block: auto;
+  }
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+fieldset {
+  border: none;
+}
