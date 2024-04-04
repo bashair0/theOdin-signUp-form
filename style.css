@@ -108,31 +108,35 @@ input {
   border: 1px solid var(--primary-clr-300);
   border-radius: 5px;
   width: 80%;
-  height: 1.5rem;
+  height: 2rem;
   padding-inline: 0.5rem;
 }
 
 input:focus {
   border-color: var(--secondary-blue);
+  box-shadow: 1px 1px 5px var(--primary-clr-300);
 }
 
 input:invalid {
   border-color: var(--secondary-red);
 }
 
+input:placeholder-shown {
+  border-color: var(--primary-clr-300);
+}
+
 @media (min-width: 31.25em) {
-  fieldset {
+  .group-input {
     display: flex;
     align-items: center;
-    height: 3rem;
   }
-  fieldset > div {
+  .group-input > div {
     width: 50%;
   }
 }
 
 @media (min-width: 64em) {
-  fieldset > div {
+  .group-input > div {
     width: 40%;
   }
 }
@@ -140,7 +144,8 @@ input:invalid {
 label {
   display: block;
   margin-top: 0.8rem;
-  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
 }
 
@@ -204,8 +209,4 @@ picture,
 svg {
   max-width: 100%;
   display: block;
-}
-
-fieldset {
-  border: none;
 }
